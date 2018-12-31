@@ -8,9 +8,10 @@ import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 
 import jobReducer from "./reducers/jobReducer";
-import UserReducer from "./reducers/userReducer";
+import UserReducer from "./reducers/currentUserReducer";
 import selectJobReducer from "./reducers/selectJobReducer";
 import activeJobReducer from "./reducers/activeJobReducer";
+import usersReducer from "./reducers/usersReducer";
 
 import Jobs from "./components/findJobs/jobs";
 
@@ -18,7 +19,8 @@ const allReducers = combineReducers({
   jobs: jobReducer,
   selectedJob: selectJobReducer,
   activeJob: activeJobReducer,
-  users: UserReducer
+  currentUser: UserReducer,
+  users: usersReducer
 });
 
 const userDummy = {

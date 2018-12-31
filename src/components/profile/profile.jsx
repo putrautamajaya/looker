@@ -4,28 +4,14 @@ import "./profile.scss";
 import { connect } from "react-redux";
 
 class Profile extends Component {
-  state = {
-    user: {},
-    selectedJob: {}
-  };
-
-  componentDidMount() {
-    const { user, selectedJob } = this.props;
-    this.setState({
-      user,
-      selectedJob
-    });
-  }
+  state = {};
 
   render() {
-    console.log("user", this.state.user);
-    console.log("selectedJob", this.state.selectedJob);
-
-    const user = this.props.user[0];
+    const { currentUser } = this.props;
 
     return (
       <div>
-        <h1>{user.name}</h1>
+        <h1>{currentUser.name}</h1>
 
         <p>Good morning, this is the summary of your profile.</p>
 
@@ -39,7 +25,7 @@ class Profile extends Component {
         <div className="container">
           <p>About</p>
 
-          <p>{user.description}</p>
+          <p>{currentUser.description}</p>
         </div>
 
         <div className="container">
@@ -47,19 +33,19 @@ class Profile extends Component {
 
           <p>Name</p>
 
-          <p>{user.name}</p>
+          <p>{currentUser.name}</p>
 
           <p>Address</p>
 
-          <p>{user.address}</p>
+          <p>{currentUser.address}</p>
 
           <p>Telephone</p>
 
-          <p>{user.phone}</p>
+          <p>{currentUser.phone}</p>
 
           <p>ID number (KTP)</p>
 
-          <p>{user.ktp}</p>
+          <p>{currentUser.ktp}</p>
         </div>
       </div>
     );
@@ -67,7 +53,7 @@ class Profile extends Component {
 }
 
 const mapStateToProps = state => ({
-  user: state.users,
+  currentUser: state.currentUser,
   selectedJob: state.selectedJob
 });
 
