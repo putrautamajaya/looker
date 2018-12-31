@@ -1,26 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+
+import "./App.css";
+
+import PreFace from "./components/preFace/preFace";
+import LoginPage from "./components/loginPage/loginPage";
+import FindJobs from "./components/findJobs/findJobs";
+import Jobdetail from "./components/jobDetail/jobdetail";
+import Profile from "./components/profile/profile";
+import ActiveJob from "./components/activeJob/activeJob";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <React.Fragment>
+          <Route path="/" component={PreFace} exact />
+          <Route path="/loginPage" component={LoginPage} />
+          <Route path="/findJobs" component={FindJobs} />
+          <Route path="/jobdetail" component={Jobdetail} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/activeJob" component={ActiveJob} />
+        </React.Fragment>
+      </BrowserRouter>
     );
   }
 }
