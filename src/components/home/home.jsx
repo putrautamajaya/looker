@@ -24,7 +24,7 @@ class Dashboard extends Component {
         <div className="home-content">
           <p>How can looker help you today?</p>
           <Link to="/findJobs">Find a job</Link>
-          <p>Hire</p>
+          <Link to="/hire">Hire</Link>
           <p>Upgrade</p>
           <Link to="/activeJob">Active jobs</Link>
           <p>Reward</p>

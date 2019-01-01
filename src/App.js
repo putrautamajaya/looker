@@ -12,6 +12,7 @@ import Profile from "./components/profile/profile";
 import ActiveJob from "./components/activeJob/activeJob";
 import Home from "./components/home/home";
 import Chat from "./components/chat/chat";
+import Hire from "./components/hire/hire";
 
 class App extends Component {
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
           <Route path="/activeJob" component={ActiveJob} />
           <Route path="/home" component={Home} />
           <Route path="/chat" component={Chat} />
+          <Route path="/hire" component={Hire} />
         </React.Fragment>
       </BrowserRouter>
     );

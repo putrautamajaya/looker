@@ -8,7 +8,7 @@ class Chat extends Component {
   render() {
     return (
       <div className="chat">
-        <img src={ChatImage} />
+        <img src={ChatImage} alt="chat" />
       </div>
     );
   }
