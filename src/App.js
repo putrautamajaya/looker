@@ -11,6 +11,7 @@ import Jobdetail from "./components/jobDetail/jobdetail";
 import Profile from "./components/profile/profile";
 import ActiveJob from "./components/activeJob/activeJob";
 import Home from "./components/home/home";
+import Chat from "./components/chat/chat";
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class App extends Component {
           <Route path="/profile" component={Profile} />
           <Route path="/activeJob" component={ActiveJob} />
           <Route path="/home" component={Home} />
+          <Route path="/chat" component={Chat} />
         </React.Fragment>
       </BrowserRouter>
     );

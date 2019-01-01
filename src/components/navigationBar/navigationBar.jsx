@@ -9,7 +9,7 @@ class NavigationBar extends Component {
     return (
       <div className="navigation-bar">
         <Link to="/home">Home</Link>
-        <Link to="/">Chat</Link>
+        <Link to="/chat">Chat</Link>
         <Link to="/findJobs">Jobs</Link>
         <Link to="/activeJob">Active</Link>
         <Link to="/profile">Profile</Link>
