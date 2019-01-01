@@ -30,7 +30,7 @@ class LoginPage extends Component {
     console.log(this.props.currentUser);
 
     if (this.state.userAutentication) {
-      return <Redirect to="/dashboard" />;
+      return <Redirect to="/home" />;
     }
 
     return (

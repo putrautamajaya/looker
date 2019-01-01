@@ -1,0 +1,11 @@
+.navigation-bar {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  a {
+    padding: 5px;
+  }
+}
